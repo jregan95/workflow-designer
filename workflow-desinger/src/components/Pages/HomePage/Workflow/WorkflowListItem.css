@@ -1,0 +1,24 @@
+.workflow-container {
+  width: 20vw;
+  height: 10vh;
+  border: 1px black solid;
+  margin: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workflow-chain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; 
+  
+}
+
