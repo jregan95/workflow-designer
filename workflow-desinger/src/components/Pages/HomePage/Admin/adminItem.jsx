@@ -4,7 +4,7 @@ function Admin() {
   return (
     <div className="admin">
       <Link to="/workflow">
-      <button> Setup Workflow</button>
+        <button> Setup Workflow</button>
       </Link>
     </div>
   );

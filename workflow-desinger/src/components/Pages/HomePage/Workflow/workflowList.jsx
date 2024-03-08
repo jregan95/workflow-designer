@@ -1,21 +1,23 @@
 import actions from "../../../../data/actions";
+import workflow from "../../../../data/workflow";
 import WorkflowListItem from "./workflowListItem";
 import "./WorkflowList.css"
 
 function WorkflowList() {
+
+  const savedWorkflow = JSON.parse(localStorage.getItem('workflow')) || workflow;
  
   return (
     <div className="workflow">
       
-      {actions.actions.map((action, index) => {
+      {savedWorkflow.stages.map((stage, index) => {
        return (
         <WorkflowListItem 
           key={index} 
-          action={action} 
+          action={stage.action} 
           index={index}
-          length={actions.actions.length}
-        />
-       )
+          length={savedWorkflow.stages.length}
+        />)
       })}
 
     </div>
