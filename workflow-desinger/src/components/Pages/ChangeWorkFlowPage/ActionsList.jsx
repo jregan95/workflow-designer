@@ -2,6 +2,7 @@ import { useDrag } from "react-dnd";
 
 
 function Action({action}) {
+  
   const [{isDragging}, drag] = useDrag(() => ({
     type: "action",
     item: {action: action},

@@ -1,25 +1,25 @@
-import WorkflowList from "./Workflow/workflowList"
+import WorkflowList from './WorkflowList';
 import NavBar from '../../Nav/nav'
-import Admin from './Admin/adminItem';
+import Admin from "./AdminView";
 
 
-
-function HomePage({adminView, setAdminView}) {
+function HomePage({toggleAdminView, adminView, workflow}) {
 
 
   return (
     <div >
 
       <NavBar 
-        setAdminView={setAdminView}
         adminView={adminView}
+        toggleAdminView={toggleAdminView}
       />
 
-      {!adminView && <WorkflowList/>}
+      {!adminView && <WorkflowList workflow={workflow}/>}
       {adminView && <Admin/>}
 
     </div>
   );
 }
+
 
 export default HomePage;

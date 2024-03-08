@@ -1,13 +1,19 @@
 
-import ChangeWorkflow from "./components/Pages/ChangeWorkFlowPage/changeWorkflow";
-import HomePage from "./components/Pages/HomePage/homePage";
+import ChangeWorkflow from "./components/Pages/ChangeWorkFlowPage/ChangeWorkflowPage";
+import HomePage from "./components/Pages/HomePage/HomePage";
+import useApplicationData from "./hooks/useApplicationData";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from 'react';
 
 
 function App() {
 
-  const [adminView, setAdminView] = useState(false)
+  const {
+    state,
+    toggleAdminView,
+    setAdminViewFalse
+  } = useApplicationData();
+
+  
 
   return (
 
@@ -18,8 +24,9 @@ function App() {
             path="/"
             element={
               <HomePage 
-                setAdminView={setAdminView}
-                adminView={adminView} 
+                adminView={state.adminView}
+                toggleAdminView={toggleAdminView}
+                workflow={state.workflow}
               />}
           />
 
@@ -27,8 +34,9 @@ function App() {
             path="/workflow"
             element={
               <ChangeWorkflow
-                setAdminView={setAdminView}
-                adminView={adminView} 
+                adminView={state.adminView}
+                toggleAdminView={toggleAdminView} 
+                setAdminViewFalse={setAdminViewFalse} 
               />}
           />
 

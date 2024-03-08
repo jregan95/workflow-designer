@@ -1,7 +1,7 @@
-import actions from "../../../../data/actions";
-import workflow from "../../../../data/workflow";
-import WorkflowListItem from "./workflowListItem";
-import "./WorkflowList.css"
+import WorkflowListItem from "./WorkflowListItem";
+import "./styles/WorkflowList.css"
+import workflow from "../../../data/workflow";
+
 
 function WorkflowList() {
 

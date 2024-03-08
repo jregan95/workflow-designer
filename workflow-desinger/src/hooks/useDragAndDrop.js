@@ -1,15 +1,14 @@
-import actions from "../../../../data/actions"
-import workflow from "../../../../data/workflow"
-import Action from "./actions"
-import '../ChangeWorkflow/DragAndDrop.css'
-import { useState } from "react"
-import { useDrop } from "react-dnd"
+import { useState } from 'react';
+import { useDrop } from 'react-dnd';
+import workflow from '../data/workflow';
+import actions from '../data/actions';
 
-function DragAndDrop() {
+
+const useDragAndDrop = () => {
 
   const [canvas, setCanvas] = useState([])
 
-  //Checking reference of drggable item and if it is over canvas / adding to canvas array
+
   const [{isOver}, drop] = useDrop(() => ({
     accept: "action",
     drop: (item) => addActionToCanvas(item.action),
@@ -18,14 +17,18 @@ function DragAndDrop() {
     })
   }))
 
+
   const addActionToCanvas = (action) => {
     const actionList = actions.actions.filter((act) => act === action)
-    setCanvas((prevCanvas) => [...prevCanvas, actionList[0]])
-  }
+    setCanvas((prevCanvas) => [...prevCanvas, actionList]);
+  };
 
 
   const handleSave = () => {
 
+    if(canvas.length === 0) {
+      return alert("Must add minimum of 1 action")
+    }
     const newWorkflow = { ...workflow };
 
     let newStageOrderArray = []
@@ -56,30 +59,7 @@ function DragAndDrop() {
     setCanvas([]);
   }
 
-  return (
-    <>
-      <div className="actions"> 
-        {actions.actions.map((action,index) => {
-          return <Action action={action} id={index}/>
-        })}
-     </div>
-
-      <div className="canvas" ref={drop}> 
-        {canvas.map((action, index) =>  {
-          return <Action action={action} id={index}/>})}
-      </div>
-
-      <div>
-        <button onClick={handleSave}>
-          Save
-        </button>
-
-        <button onClick={handleCancel}>
-          Cancel
-        </button>
-      </div>
-    </>
-  )
+  return { canvas, drop, isOver, handleSave, handleCancel };
 }
 
-export default DragAndDrop
+export default useDragAndDrop

@@ -1,16 +1,19 @@
 import NavBar from "../../Nav/nav";
-import DragAndDrop from "./ChangeWorkflow/dragAndDrop";
+import DragAndDrop from "./DragAndDrop";
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 
-function ChangeWorkflow({adminView, setAdminView}) {
+function ChangeWorkflow({toggleAdminView, adminView, setAdminViewFalse}) {
+  
+
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
 
         <NavBar
-          setAdminView={setAdminView}
           adminView={adminView}
+          toggleAdminView={toggleAdminView}
+          setAdminViewFalse={setAdminViewFalse} 
         />
 
         <DragAndDrop/>
@@ -19,5 +22,6 @@ function ChangeWorkflow({adminView, setAdminView}) {
     </DndProvider>
   );
 }
+
 
 export default ChangeWorkflow;
