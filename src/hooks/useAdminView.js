@@ -14,7 +14,7 @@ function reducer(state, action) {
       throw new Error(`Unsupported action: ${action.type}`);
   }
 
-}
+};
 
 
 const useAdminView = () => {
@@ -35,6 +35,6 @@ const useAdminView = () => {
     setAdminViewFalse
   }
 
-}
+};
 
 export default useAdminView;
