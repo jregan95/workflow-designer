@@ -1,5 +1,5 @@
-import NavBar from "../../Nav/nav";
-import DragAndDrop from "./DragAndDrop";
+import NavBar from "../../Nav/nav"
+import DragAndDrop from "./DragAndDrop"
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 
@@ -21,6 +21,7 @@ function ChangeWorkflow({toggleAdminView, adminView, setAdminViewFalse}) {
       </div>
     </DndProvider>
   );
+  
 }
 
 

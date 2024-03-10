@@ -33,6 +33,6 @@ const workflow = {
 
     }
   ]
-}
+};
 
 export default workflow;

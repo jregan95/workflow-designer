@@ -1,6 +1,6 @@
-import WorkflowListItem from "./WorkflowListItem";
+import WorkflowListItem from "./WorkflowListItem"
 import "./styles/WorkflowList.css"
-import workflow from "../../../data/workflow";
+import workflow from "../../../data/workflow"
 
 
 function WorkflowList() {
@@ -27,6 +27,7 @@ function WorkflowList() {
 
     </div>
   );
+  
 }
 
 export default WorkflowList;

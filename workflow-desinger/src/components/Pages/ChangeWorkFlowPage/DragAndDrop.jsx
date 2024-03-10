@@ -44,7 +44,8 @@ function DragAndDrop() {
       </div>
 
     </div>
-  )
+  );
+  
 }
 
-export default DragAndDrop
+export default DragAndDrop;

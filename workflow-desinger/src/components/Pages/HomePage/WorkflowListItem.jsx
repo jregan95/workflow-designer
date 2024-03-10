@@ -1,5 +1,5 @@
 import "./styles/WorkflowListItem.css"
-import Arrow from "./Arrow";
+import Arrow from "./Arrow"
 
 function WorkflowListItem({action, index, length}) {
   
@@ -16,6 +16,7 @@ function WorkflowListItem({action, index, length}) {
 
     </div>
   );
+  
 }
 
 export default WorkflowListItem;

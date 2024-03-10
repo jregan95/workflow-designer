@@ -5,6 +5,7 @@ const actions = {
     "Sort",
     "Extract",
     "Split"
-  ] }
+  ] 
+};
 
   export default actions;

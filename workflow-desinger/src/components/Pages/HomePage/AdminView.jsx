@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import './styles/AdminView.css'
 
 function Admin() {
@@ -14,6 +14,7 @@ function Admin() {
 
     </div>
   );
+  
 }
 
 export default Admin;
