@@ -1,5 +1,67 @@
 .canvas {
-  width: 40vw;
-  height: 40vh;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80vw;
+  height: 20vh;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 0px none #000000;
+  border-radius: 14px;
+}
+
+.drag-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  height: 22vh;
+}
+
+.btn-save {
+  padding: 16px;
+  width: 8vw;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  margin: 35px;
+  margin-right: 20px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 0px none #000000;
+  border-radius: 14px;
+  color: #0091bc;
+  font-weight: 600;
+}
+
+.btn-cancel {
+  padding: 16px;
+  width: 8vw;
+  font-size: 18px;
+  margin: 35px;
+  margin-right: 20px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 0px none #000000;
+  font-family: "Poppins", sans-serif;
+  border-radius: 14px;
+  color:  rgba(235, 92, 39, 1);
+  font-weight: 600;
+}
+
+.btn-cancel:hover {
+  color: #0091bc
+}
+
+.btn-save:hover {
+  color:  rgba(235, 92, 39, 1);
+}
+
+.change-title {
+  margin-left: 40px;
+  margin-top: 50px;
+  font-size: 28px;
+  align-self: flex-start;
 }

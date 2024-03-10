@@ -2,6 +2,33 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
-  background-color: rgb(154, 186, 228);
+  background-color: #0091bc;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.view-btn {
+  padding: 16px;
+  width: 8vw;
+  font-size: 18px;
+  margin: 10px;
+  margin-right: 20px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 0px none #000000;
+  border-radius: 14px;
+  color: rgba(235, 92, 39, 1);
+  font-weight: 600;
+}
+
+.view-btn:hover {
+  color: #0091bc;
+}
+
+.title {
+  margin-left: 15px;
+  font-size: 28px;
+  color: aliceblue;
+  font-weight: 700;
 }

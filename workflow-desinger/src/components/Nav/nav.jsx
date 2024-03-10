@@ -14,20 +14,21 @@ function NavBar({toggleAdminView, adminView, setAdminViewFalse}) {
 
   return (
     <div className="top-nav">
-      <h3 className="title">
-       Workflow
-       </h3>
-       {location.pathname !== "/" ? (
-        <Link to="/">
-        <button className="view-btn" onClick={() => setAdminViewFalse()}>
-          Home
-        </button>
+
+      <h3 className="title">Workflow Designer</h3>
+
+        {location.pathname !== "/" ? (
+          <Link to="/">
+            <button className="view-btn" onClick={() => setAdminViewFalse()}>
+              Home
+            </button>
         </Link>
-      ) : (
-        <button className="view-btn" onClick={handleClick}>
-          {!adminView ? "Admin" : "Home"}
-        </button>
+        ) : (
+          <button className="view-btn" onClick={handleClick}>
+            {!adminView ? "Admin" : "Home"}
+          </button>
       )}
+      
     </div>
   );
 }

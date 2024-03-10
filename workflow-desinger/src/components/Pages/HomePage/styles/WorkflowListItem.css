@@ -1,9 +1,13 @@
 .workflow-container {
-  width: 20vw;
-  height: 10vh;
+  width: 16vw;
+  height: 15vh;
   border: 1px black solid;
-  margin: 10px;
-  font-size: 20px;
+  margin: 15px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 0px none #000000;
+  border-radius: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,14 +15,19 @@
 
 .workflow-chain {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .arrow {
   display: flex;
   justify-content: center;
-  margin-top: 10px; 
-  
+  margin-top: 10px;  
+}
+
+.current-workflow-title {
+  margin-left: 40px;
+  margin-top: 50px;
+  font-size: 28px;
 }
 

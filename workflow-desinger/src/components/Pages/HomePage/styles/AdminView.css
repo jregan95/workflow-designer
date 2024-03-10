@@ -1,0 +1,21 @@
+.admin-title {
+  margin-left: 40px;
+  margin-top: 50px;
+  font-size: 28px;
+}
+
+.setup-btn {
+  padding: 15px;
+  font-size: 24px;
+  margin-left: 60px;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 0px none #000000;
+  border-radius: 14px;
+  color: rgba(235, 92, 39, 1);
+  font-weight: 600;
+}
+
+.setup-btn:hover {
+  color: #0091bc;
+}

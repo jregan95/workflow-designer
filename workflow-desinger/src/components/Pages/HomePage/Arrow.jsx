@@ -1,10 +1,11 @@
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Arrow() {
+  
   return (
     <div>
-       <FontAwesomeIcon icon={faArrowDown} size="2x" />
+       <FontAwesomeIcon icon={faArrowRightLong} size="2x" />
     </div>
   );
 }

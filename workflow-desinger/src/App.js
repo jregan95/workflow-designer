@@ -1,7 +1,7 @@
 
 import ChangeWorkflow from "./components/Pages/ChangeWorkFlowPage/ChangeWorkflowPage";
 import HomePage from "./components/Pages/HomePage/HomePage";
-import useApplicationData from "./hooks/useApplicationData";
+import useAdminView from "./hooks/useAdminView";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
@@ -11,7 +11,7 @@ function App() {
     state,
     toggleAdminView,
     setAdminViewFalse
-  } = useApplicationData();
+  } = useAdminView();
 
   
 

@@ -1,0 +1,13 @@
+.action {
+  display: flex;
+  align-items: center;
+  margin: 60px;
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 0px none #000000;
+  border-radius: 14px;
+  padding: 20px;
+  padding-left: 44px;
+  padding-right: 44px;
+}

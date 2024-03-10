@@ -1,8 +1,9 @@
-import { useDrag } from "react-dnd";
-
+import { useDrag } from "react-dnd"
+import './styles/ActionList.css'
 
 function Action({action}) {
   
+  //React DnD library, checks if item is being dragged
   const [{isDragging}, drag] = useDrag(() => ({
     type: "action",
     item: {action: action},
@@ -12,7 +13,7 @@ function Action({action}) {
   }))
 
   return (
-    <div ref={drag} style={{border: isDragging ? "5px solid pink" : "0px"}}> {action}</div>
+    <div ref={drag} className="action"> {action}</div>
   )
 }
 

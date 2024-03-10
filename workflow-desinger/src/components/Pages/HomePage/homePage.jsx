@@ -3,6 +3,7 @@ import NavBar from '../../Nav/nav'
 import Admin from "./AdminView";
 
 
+
 function HomePage({toggleAdminView, adminView, workflow}) {
 
 
@@ -13,9 +14,14 @@ function HomePage({toggleAdminView, adminView, workflow}) {
         adminView={adminView}
         toggleAdminView={toggleAdminView}
       />
+      
+      <div className="list-containter">
+        {!adminView && <WorkflowList workflow={workflow}/>}
+      </div>
 
-      {!adminView && <WorkflowList workflow={workflow}/>}
-      {adminView && <Admin/>}
+      <div>
+        {adminView && <Admin/>}
+      </div>
 
     </div>
   );

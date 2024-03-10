@@ -4,7 +4,7 @@ import Arrow from "./Arrow";
 function WorkflowListItem({action, index, length}) {
   
   return (
-    <div className="worflow-chain">
+    <div className="workflow-chain">
 
       <div className="workflow-container">
         {action}

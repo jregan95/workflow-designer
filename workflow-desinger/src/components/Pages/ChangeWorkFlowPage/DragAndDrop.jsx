@@ -8,35 +8,42 @@ function DragAndDrop() {
   const {
     canvas,
     drop,
-    isOver,
     handleSave,
-    handleCancel
+    handleCancel,
+    isActionInCanvas
     } = useDragAndDrop();
 
   
   return (
-    <>
+    <div className="drag-drop">
+    
+      <h2 className="change-title">Change Workflow</h2>
+      
       <div className="actions"> 
         {actions.actions.map((action,index) => {
+           if (!isActionInCanvas(action)) {
           return <ActionsList action={action} id={index} key={index}/>
+           }
         })}
      </div>
 
-      <div className="canvas" ref={drop}> 
+      <div className="canvas" ref={drop}>
         {canvas.map((action, index) =>  {
-          return <ActionsList action={action} id={index} key={index}/>})}
+          return <ActionsList action={action} id={index} key={index}/>
+          })}
       </div>
 
       <div>
-        <button onClick={handleSave}>
+        <button className="btn-save" onClick={handleSave}>
           Save
         </button>
 
-        <button onClick={handleCancel}>
+        <button className="btn-cancel" onClick={handleCancel}>
           Cancel
         </button>
       </div>
-    </>
+
+    </div>
   )
 }
 
